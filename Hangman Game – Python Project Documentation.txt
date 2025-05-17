@@ -1,0 +1,92 @@
+# Hangman Game – Python Project Documentation
+
+## Project Name
+
+**Hangman – 5 Letter Word Guess Game**
+
+---
+
+## About the Project
+
+This is a simple terminal-based Hangman game made using Python. The game picks a random 5-letter word from a list. The player has to guess the correct word by typing full words. Every wrong guess draws part of the hangman using ASCII art. The player gets 6 chances to win.
+
+---
+
+## How it Works
+
+* The game starts with 6 lives.
+* A 5-letter word is randomly selected from a word list.
+* The player types a full 5-letter word each turn.
+* If the guess has correct letters in the right position, those letters are revealed.
+* If the word is incorrect, one life is lost and the next part of the hangman is shown.
+* The game ends when:
+
+  * The word is fully guessed (win), or
+  * All 6 lives are lost (game over).
+
+---
+
+## Sample Output
+
+Guess the 5-letter word!
+
+Enter your guess: sweet
+Progress: - - e e -
+Wrong word. Lives remaining: 5
+
+---
+
+## Code Components
+
+* **HANGMAN\_STAGES**: ASCII art showing each stage of the hangman.
+* **wordlist**: A list of 5-letter words to choose from.
+* **correctword**: The randomly selected word the player needs to guess.
+* **dashes**: Tracks the correct letters guessed and blanks for the rest.
+* **Main loop**: Repeats until the word is guessed or lives run out.
+
+---
+
+## Problems I Faced
+
+* **Word Length Validation**
+  At first, there was no check to make sure the input was exactly 5 letters. Players could enter any length word, which caused problems. I added a condition to fix this.
+
+* **Losing Lives Even on Partially Correct Words**
+  The program reduced a life even when some letters were correct but the word wasn’t fully right. I left it this way for now to keep the game simple.
+
+* **Wrong Dash Length**
+  I mistakenly had 6 dashes at first instead of 5. That made the display confusing, so I fixed it by using only 5 dashes.
+
+* **No Check for Repeated Guesses**
+  If the user guessed the same wrong word more than once, it still used up a life. I didn’t fix this to avoid making the code longer.
+
+---
+
+## What I Learned
+
+* Working with **lists** and **loops** in Python
+* Handling **user input** and **basic validation**
+* How to use **ASCII art** for visual feedback
+* Logic building for a simple **text-based game**
+
+---
+
+## How to Run the Game
+
+* Save the code in a file named `hangman.py`
+* Open the terminal or command prompt
+* Run the program using: `python hangman.py`
+
+---
+
+## Future Improvements
+
+* Add a **hint** system
+* Store and show **all previous guesses**
+* Block **duplicate guesses**
+* Allow **single letter guesses** instead of full words
+* Load a **larger word list** from a text file
+
+---
+
+
